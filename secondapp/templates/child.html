@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'secondapp/templates/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance And Filters</title>
+</head>
+<body>`
+{% block child_block %}
+<div style="color:cyan;">child specific extra code</div>
+<div style="color:yellow"><h1>Custom Template Filters</h1></div>
+{%load cust_filters%}
+<div style="color:orange;"><p>Rendered text with {{ my_date|date:"c" }}</p>
+{% comment "Optional note" %}
+    <p>Commented out text with {{ create_date|date:"c" }}</p>
+{% endcomment %}
+    </div>
+<ul>
+    <div style="color:green;"><li>{{msg1|add:"--Durga+Hi"}}</li></div>
+    <div style="color:lightgreen"><li>{{msg1|f8upper}}</div>
+    <div style="color:brown"><li>{{msg1|title}}</li></div>
+    <div style="color:skyblue"><li>Cuurent Date And Time:{{my_date|date}}</li></div>
+
+
+
+</ul>
+{% endblock %}
+
+</body>
+</html>

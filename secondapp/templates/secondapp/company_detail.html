@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo{
+         color:blue;
+         text-shadow:2px 2px 2px red;
+         background-color:cyan;
+        }
+        #test{
+        color:gold;
+         text-shadow:2px 2px 2px red;
+        background-color:skyblue;
+        }
+        #color{
+        color:violet;
+         text-shadow:2px 2px 2px red;
+        background-color:yellow;
+        }
+        h1{
+        color:pink;
+        text-shadow:2px 2px 2px red;
+        }
+        #hello{
+        color:orange;
+        text-shadow:2px 2px 2px red;
+        }
+        #hi{color:green;
+        text-shadow:2px 2px 2px red;
+        }
+        #super{color:blue;
+        text-shadow:2px 2px 2px red;}
+        #to{
+        color:black;
+        text-shadow:2px 2px 2px red;}
+    </style>
+</head>
+<h1 >Company Information</h1>
+<body>
+<h2 id="demo"><li>Company Name: {{company.name|upper}}</li></h2>
+<h2 id="test"><li>Company Location: {{company.location|title}}</li></h2>
+<h2 id="color"><li>Company Ceo: {{company.ceo|title}}</li></h2>
+<h1 id="hello">Workers Information</h1>
+{% for worker in company.workers.all %}
+<!--<ul>-->
+<h4 id="hi"><li>Worker Number: {{worker.eno}}</li></h4>
+<h4 id="super"><li>Worker Name: {{worker.name}}</li></h4>
+<h4 id="to"><li>Worker Salary: {{worker.salary}}</li></h4>
+<!--<h4 ><li>Worker Salary: {{worker.company}}</li></h4>-->
+<h2><a href="/second/update/{{company.id}}">Update Company Details</a></h2>
+<h2><a href="/second/delete/{{company.id}}">Delete Company Details</a></h2>
+
+
+
+
+{% endfor%}
+<!--</ul>-->
+
+</body>
+</html>

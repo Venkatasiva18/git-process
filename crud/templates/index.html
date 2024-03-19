@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Employee Information Dash Board</h1>
+<table border="2">
+    <thead>
+    <th>Employee Number</th>
+    <th>Employee Name</th>
+    <th>Employee Salary</th>
+    <th>Employee Address</th>
+    </thead>
+    {% for emp in employees %}
+    <tr>
+        <td>{{emp.emp_no}}</td>
+                <td>{{emp.emp_name}}</td>
+        <td>{{emp.emp_sal}}</td>
+        <td>{{emp.emp_addr}}</td>
+        <td>
+          <a href="/crud/delete1/{{emp.id}}">Delete</a><br><br>
+            <a href="/crud/update1/{{emp.id}}">Update</a><br><br>
+        </td>
+    </tr>
+{% endfor %}
+</table><br><br><br>
+<a href="/crud/insert/">Do You Want Insert New Employee</a>
+</body>
+</html>

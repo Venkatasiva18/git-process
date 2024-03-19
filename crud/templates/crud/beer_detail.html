@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #demo{
+         color:blue;
+         text-shadow:2px 2px 2px green;
+         background-color:cyan;
+        }
+        #test{
+        color:gold;
+         text-shadow:2px 2px 2px darkblue;
+        background-color:blue;
+        }
+        #color{
+        color:violet;
+         text-shadow:2px 2px 2px red;
+        background-color:yellow;
+        }
+        h1{
+        color:pink;
+        text-shadow:2px 2px 2px red;
+        }
+
+        #price{
+        text-shadow:2px 2px 2px gold;
+          background-color:green;
+          color:orange;}
+
+
+    </style>
+
+</head>
+<body>
+<h1 >Beers Information</h1>
+
+<h2 id="demo"><li>Beer Name: {{beer.name}}</li></h2>
+<h2 id="test"><li>Beer Taste: {{beer.taste}}</li></h2>
+<h2 id="color"><li>Beer Color: {{beer.color}}</li></h2>
+<h2 id="price"><li>Beer price: {{beer.price}}</li></h2>
+</body>
+</html>

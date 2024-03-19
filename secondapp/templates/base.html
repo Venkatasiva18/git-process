@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<div style="color:blue;">html, css, bootstrap links</div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance And Filters</title>
+</head>
+<body>
+<div style="color:red;">common code required for every child template</div>
+{% block child_block %}
+Anything outside of this block available to child tag.
+in child template the specific code should be in this block
+{% endblock %}
+
+</body>
+</html>

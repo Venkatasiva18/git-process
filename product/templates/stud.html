@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'css/demo.css'%}">
+</head>
+<body bgcolor="cyan" text="blue">
+<h1>The Student list is:</h1>
+{% if student_list %}
+<table>
+    <thead>
+    <th>rollno</th>
+    <th>name</th>
+    <th>fee</th>
+    <th>add</th>
+</thead>
+    {% for stud in student_list %}
+<tr>
+    <td>{{stud.rollno}}</td>
+    <td>{{stud.name}}</td>
+    <td>{{stud.fee}}</td>
+    <td>{{stud.addr}}</td>
+</tr>
+{% endfor %}
+</table>
+{%else%}
+<p>No Records Found</p>
+{%endif%}
+</body>
+</html>

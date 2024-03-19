@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2{color:red;
+            text-shadow:2px 2px 2px red;
+             background-color:orange;}
+        h3{color:yellow;
+            text-shadow:2px 2px 2px red;
+             background-color:orange;}
+    </style>
+</head>
+<body>
+
+<h1 style = "color:pink; text-shadow:2px 2px 2px red;
+             background-color:orange;">The Student Information is:</h1>
+{% if college_list %}
+<table>
+    <thead>
+    <th><h3>college_name </h3></th>
+    <th><h3>branch </h3></th>
+    <th><h3>id_number </h3></th>
+    <th><h3>fee</h3></th>
+</thead>
+    {% for college in college_list %}
+<tr>
+
+    <td><h2>{{college.college_name}}</h2> </td>
+    <td><h2>{{college.branch}} </h2></td>
+    <td><h2>{{college.id_number}} </h2></td>
+    <td><h2>{{college.fee}}</h2></td>
+</tr>
+{% endfor %}
+</table>
+{%else%}
+<p>No Records Found</p>
+{%endif%}
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Of All Companies</title>
+    <style>
+        h2{ color:blue;
+             text-shadow:2px 2px 2px red;
+              background-color:pink;
+        }
+        h1{ color:red;
+            text-shadow:2px 2px 2px red;
+             background-color:orange;
+             }
+
+    </style>
+</head>
+<body>
+<h1>List Of All Companies</h1>
+
+{% if company_list %}
+<!--<table>-->
+<!--    <thead>-->
+<!--    <th>name </th>-->
+<!--    <th>location </th>-->
+<!--    <th>ceo </th>-->
+<!--</thead>-->
+<tr>
+    {% for company in company_list %}
+    <td><h2><a href="/second/detail/{{company.id}}">{{company.name|upper}}</a></h2></td>
+    </tr>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

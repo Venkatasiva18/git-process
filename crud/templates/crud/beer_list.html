@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Of Beer Names</title>
+    <style>
+        h2{ color:blue;
+             text-shadow:2px 2px 2px red;
+              background-color:pink;
+        }
+        h1{ color:red;
+            text-shadow:2px 2px 2px red;
+             background-color:orange;
+             }
+        thead{
+        text-shadow:2px 2px 2px blue;
+             background-color:orange;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>List Of Beer Names</h1>
+
+{% if beer_list %}
+<table>
+    <thead>
+    <th>Beer name </th>
+    <th>Details</th>
+    <th>Update</th>
+    <th>Delete</th>
+</thead>
+<tr>
+    {% for beer in beer_list %}
+    <td><h2>{{beer.name|title}}</h2></td>
+    <td><h2><a href="/crud/detail/{{beer.id}}">Details</a></h2></td>
+        <td><h2><a href="/crud/update/{{beer.id}}">Update</a></h2></td>
+    <td><h2><a href="/crud/delete/{{beer.id}}">Delete</a></h2></td>
+
+    </tr>
+    {% endfor %}
+{% endif %}
+</table><br><br><br>
+<h2><a href="/crud/create" class="btn btn-primary btn-lg">Do you want to New Beer</a></h2>
+
+</body>
+</html>

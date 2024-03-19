@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+  <style>
+    h1{
+    color:darkgreen
+    }
+  </style>
+</head>
+<body>
+<h1>Delete {{company.name}}???</h1><hr>
+<form method="post">
+  {% csrf_token %}
+
+      <input type="submit" value="Delete Record">
+    <a href="/second/company/" class="btn btn-success" type="Cancel">Cancel</a>
+
+</form>
+
+
+</body>
+</html>
