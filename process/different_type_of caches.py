@@ -64,7 +64,9 @@ CACHES5 = {
 CACHE6 = {
     "default": {
         "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
-        "LOCATION": "c:/foo/bar" ,
+        "LOCATION": ["c:/foo/bar"
+                     "d:/foo/bar"],
+
     }
 }
 
