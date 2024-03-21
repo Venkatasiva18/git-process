@@ -38,3 +38,32 @@ CACHES3 = {
         "LOCATION": "redis://username:password@127.0.0.1:6379",
     }
 }
+
+# Database Caching
+CACHE4 = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.db.DatabaseCache",
+        "LOCATION": "my_cache_table",
+    }
+}
+
+# Filesystem caching¶
+# The file-based backend serializes and stores each cache value as a separate file.
+# To use this backend set BACKEND to "django.core.cache.backends.
+# filebased.FileBasedCache" and LOCATION to a suitable directory.
+# For example, to store cached data in /var/tmp/django_cache, use this setting:
+
+CACHES5 = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+        "LOCATION": "/var/tmp/django_cache",
+    }
+}
+# If you’re on Windows, put the drive letter at the beginning of the path, like this:
+
+CACHE6 = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.filebased.FileBasedCache",
+        "LOCATION": "c:/foo/bar",
+    }
+}
