@@ -16,8 +16,7 @@ urlpatterns = [
     path("pass/", views.feedbackview4, name="feedbackview4"),
     path("session/", views.session, name="session"),
     path("check/", views.check_View, name="check_view"),
-    path("session1/", views.session1, name="session1"
-                                           ""),
+    path("session1/", views.session1, name="session1"),
 
     path("check1/", views.check1_View, name="check1_view"),
 
