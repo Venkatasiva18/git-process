@@ -187,3 +187,26 @@ def check1_View(request):
         request.session.delete_test_cookie()
         return HttpResponse('<h1>Index Page</h1>')
 
+from django.core.mail import send_mail
+from django.shortcuts import render
+from django.core.mail import send_mail, send_mass_mail
+from django.http import HttpResponse
+from django.conf import settings
+
+def sendSimpleEmail(request):
+    email1 = ('Subject of the email #1',
+    'Message of the email #1',
+    'venkatasivauppala24@gmail.com',
+    ['venkatasivauppala18@gmail.com', 'uppalavenkatasiva573@gmail.com'])
+    email2 = ('Subject of the email #2',
+    'Message of the email #2',
+    'venkatasivauppala24@gmail.com',
+    ['uppalavenkatasivaiah573@gmail.com'])
+    email3 = ('Subject of the email #3',
+    'Message of the email #3',
+    'venkatasivauppala24@gmail.com',
+    ['uppalavenkatasiva573@gmail.com.com'])
+    send_mass_mail((email1, email2, email3), fail_silently=False)
+    return HttpResponse("All the Emails sent successfully")
+
+
