@@ -70,4 +70,17 @@ CACHE6 = {
     }
 }
 
+# Local-memory caching¶
+# This is the default cache if another is not specified in your settings file.
+# If you want the speed advantages of in-memory caching but don’t have the capability of running Memcached,
+# consider the local-memory cache backend. This cache is per-process (see below) and thread-safe.
+# To use it, set BACKEND to "django.core.cache.backends.locmem.LocMemCache". For example:
+
+CACHE7 = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "unique-snowflake",
+    }
+}
+
 
